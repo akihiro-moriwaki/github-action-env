@@ -33,11 +33,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Set env
         run: |
-          echo '::set-env name=ENV::dev'
-          echo '::set-env name=NAME::excite'
+          echo 'ENV=dev' >> $GITHUB_ENV
+          echo 'NAME=excite' >> $GITHUB_ENV
       - name: Get env
         run: |
           echo 'env' $ENV
           echo 'name' $NAME
-    env:
-      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
