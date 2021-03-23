@@ -39,3 +39,5 @@ jobs:
         run: |
           echo 'env' $ENV
           echo 'name' $NAME
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
